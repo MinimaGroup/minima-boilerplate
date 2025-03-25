@@ -64,8 +64,8 @@ export default function HomePage() {
               <Image
                 src="https://minimagroup.nyc/images/minima-crane.png"
                 alt="Minima Crane"
-                width={300}
-                height={300}
+                width={450}
+                height={450}
                 className="object-contain rounded-xl"
                 priority
               />

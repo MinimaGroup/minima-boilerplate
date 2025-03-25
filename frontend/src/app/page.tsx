@@ -61,18 +61,14 @@ export default function HomePage() {
               </div>
             </div>
             <div className="flex-1 md:max-w-md relative">
-              <div className="w-full aspect-square rounded-xl bg-gradient-to-br from-blue-600 to-violet-500 shadow-xl p-1">
-                <div className="w-full h-full bg-background rounded-lg p-6 flex items-center justify-center">
-                  <Image
-                    src="https://minimagroup.nyc/images/minima-crane.png"
-                    alt="Minima Crane"
-                    width={300}
-                    height={300}
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </div>
+              <Image
+                src="https://minimagroup.nyc/images/minima-crane.png"
+                alt="Minima Crane"
+                width={300}
+                height={300}
+                className="object-contain rounded-xl"
+                priority
+              />
             </div>
           </div>
         </div>

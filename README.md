@@ -96,27 +96,6 @@ The application uses Tailwind CSS for styling. You can customize the theme in `f
 
 UI components are built with Radix UI and styled with Tailwind CSS. You can find all components in the `frontend/components/ui` directory.
 
-## Deployment
-
-### Frontend
-
-The frontend can be deployed to Vercel, Netlify, or any other static site hosting service.
-
-#### Vercel (recommended)
-
-```bash
-cd frontend
-vercel
-```
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Support
 
 If you have any questions or need help with the boilerplate, please open an issue on GitHub.

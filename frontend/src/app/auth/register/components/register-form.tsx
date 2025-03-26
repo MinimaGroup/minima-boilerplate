@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import { useSearchParams } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -58,8 +57,6 @@ export function RegisterForm({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
-  const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/";
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [error, setError] = React.useState<string | null>(null);
   const { login } = useAuth();
@@ -88,7 +85,7 @@ export function RegisterForm({
         const response = await authService.login(values.email, values.password);
         login(response);
         toast.success("Successfully registered and signed in!");
-        window.location.href = callbackUrl;
+        window.location.href = "/dashboard";
       } catch (loginError) {
         console.error("Login after registration error:", loginError);
         // If login fails after successful registration, still show success for registration
@@ -125,7 +122,7 @@ export function RegisterForm({
               const tokens = await authService.googleLogin(response.code);
               login(tokens);
               toast.success("Successfully signed in with Google!");
-              window.location.href = callbackUrl;
+              window.location.href = "/dashboard";
             } catch (error) {
               console.error("Google sign in error:", error);
               toast.error("Failed to sign in with Google");
